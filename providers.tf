@@ -1,13 +1,13 @@
 terraform {
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
+      source = "hashicorp/aws"
     }
   }
 }
 
 provider "aws" {
-#   shared_config_files      = ["/Users/tf_user/.aws/conf"]
-  shared_credentials_files = ["~/.aws/creds"]
+  region                   = "us-west-2"
+  shared_credentials_files = ["~/.aws/credentials"]
   profile                  = "vscode"
 }
