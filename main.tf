@@ -65,3 +65,8 @@ resource "aws_security_group" "dev_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+resource "aws_key_pair" "dev_auth" {
+  key_name = "dev"
+  public_key = file("~/.ssh/dev.pub")
+}
